@@ -267,7 +267,6 @@ function closePopUp(id) {
 function deleteItem(id, index, tableId, qty, price) {
   let result = JSON.parse(sessionStorage.getItem(tableId));
   result.splice(index, 1);
-  console.log(result);
   sessionStorage.setItem(tableId, JSON.stringify(result));
   billId = "tableBill-" + tableId;
   const tableName = document.getElementById(billId);
