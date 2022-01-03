@@ -1,0 +1,128 @@
+.all {
+  display: flex;
+  flex-flow: row;
+}
+
+#tables {
+  width: 25vw;
+  padding: 10px;
+  height: 220vh;
+  display: flex;
+  /* align-items: center; */
+  flex-flow: column;
+  border-right: black 2px solid;
+}
+#menu {
+  padding: 10px;
+  width: 75vw;
+  height: 220vh;
+  display: flex;
+  /* align-items: center; */
+  flex-flow: column;
+  border-left: black 2px solid;
+}
+input {
+  width: 75%;
+  margin-bottom: 1em;
+}
+h1 {
+  text-align: center;
+}
+
+.icon {
+  padding-top: 10px;
+}
+
+.pop-up{
+  background: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  position: absolute;
+  display: none;
+}
+
+.popup-content {
+  height: 500px;
+  width: 800px;
+  background: white;
+  margin-top: 150px;
+  margin-left: 400px;
+  border-radius: 5px;
+}
+
+.header {
+  background: rgb(0, 0, 205);
+  padding-top: 15px;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.items-details {
+  margin: 20px;
+  display: flex;
+  flex-flow: row;
+  gap: 40px;
+}
+
+h5 {
+  font-weight: bold;
+}
+
+#sno {
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  align-items: center;
+}
+#item-name {
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  align-items: center;
+}
+#item-price {
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  align-items: center;
+}
+#servings {
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  text-align: center;
+  align-items: center;
+}
+
+#delete-icon {
+  display: flex;
+  flex-flow: column;
+  gap: 30px;
+  align-items: center;
+}
+
+h6 {
+  font-size: 20px;
+  font-weight: bold;
+  padding-left: 40px;
+}
+
+#total-bill {
+  padding-left: 100px;
+}
+
+#close-session {
+  padding-left: 500px;
+  padding-top: 80px;
+}
+#close-session p {
+  font-size: 20px;
+}
+
+#close-btn {
+  padding-right: 10px;
+  float: right;
+}
+
