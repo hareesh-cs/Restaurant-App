@@ -1,3 +1,4 @@
+
 function Items(name, price, type, qty) {
   this.name = name;
   this.price = price;
@@ -149,13 +150,13 @@ all_tables.forEach((table) => {
 });
 function dragOver(e) {
   e.preventDefault();
-  this.style.border = "1px dashed green";
+  this.style.border = "1px solid black";
 }
 function dragEnter() {
-  this.style.border = "1px dashed green";
+  this.style.border = "1px solid black";
 }
 function dragLeave() {
-  this.style.border = "none";
+  this.style.border = "1px solid black";
 }
 
 function dragDrop() {
@@ -202,6 +203,7 @@ function openItems(tableId) {
   let deleteIcon = "<h5>Delete</h5>";
   var totalbill = 0;
   if (result.length == 0) {
+    document.querySelectorAll(".drop-table").forEach(x => x.style.backgroundColor = "white");
     document.querySelector(".pop-up").style.display = "none";
     return;
   }
