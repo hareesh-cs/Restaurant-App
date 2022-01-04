@@ -306,13 +306,7 @@ function increment(id, itemId,tableId, index) {
   }
 
   document.getElementById("total-bill").innerHTML = totalbill;
-  // let result1 = JSON.parse(sessionStorage.getItem(tableId));
-  // sessionStorage.setItem(tableId, JSON.stringify(result));
-  // billId = "tableBill-" + tableId;
-  // const tableName = document.getElementById(billId);
-  // const spans = tableName.getElementsByTagName("span");
-  // spans[1].innerHTML = quantity;
-  // spans[0].innerHTML = totalbill;
+ 
   billId = "tableBill-" + tableId;
   const tableName = document.getElementById(billId);
   const spans = tableName.getElementsByTagName("span");
