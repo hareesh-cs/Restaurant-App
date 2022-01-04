@@ -273,8 +273,18 @@ function deleteItem(id, index, tableId, qty, price) {
   billId = "tableBill-" + tableId;
   const tableName = document.getElementById(billId);
   const spans = tableName.getElementsByTagName("span");
-  spans[1].innerHTML = Number(spans[1].innerHTML) - 1;
-  spans[0].innerHTML = Number(spans[0].innerHTML) - qty * price;
+  tq=0;
+  totalbill=0;
+  for(let i=0;i<result.length;i++)
+  {
+    let first = result[i][0];
+    let quantity = result[i][1];
+    let itemId = Number(first);
+    totalbill += menuItems[itemId - 1].price * quantity;
+    tq += Number(quantity);
+  }
+  spans[1].innerHTML = tq;
+  spans[0].innerHTML = totalbill;
 
   openItems(tableId);
 }
@@ -285,23 +295,28 @@ function increment(id, itemId,tableId, index) {
   result[index][1] = serves;
   sessionStorage.setItem(id.name, JSON.stringify(result));
   result = JSON.parse(sessionStorage.getItem(id.name));
-
+  var tq=0
   var totalbill = 0;
   for (let i = 0; i < result.length; i++) {
     first = result[i][0];
     quantity = result[i][1];
     itemId = Number(first);
     totalbill += menuItems[itemId - 1].price * quantity;
+    tq+=Number(quantity);
   }
 
   document.getElementById("total-bill").innerHTML = totalbill;
-  let result1 = JSON.parse(sessionStorage.getItem(tableId));
-  result1.splice(index, 1);
-  sessionStorage.setItem(tableId, JSON.stringify(result));
+  // let result1 = JSON.parse(sessionStorage.getItem(tableId));
+  // sessionStorage.setItem(tableId, JSON.stringify(result));
+  // billId = "tableBill-" + tableId;
+  // const tableName = document.getElementById(billId);
+  // const spans = tableName.getElementsByTagName("span");
+  // spans[1].innerHTML = quantity;
+  // spans[0].innerHTML = totalbill;
   billId = "tableBill-" + tableId;
   const tableName = document.getElementById(billId);
   const spans = tableName.getElementsByTagName("span");
-  spans[1].innerHTML = quantity;
+  spans[1].innerHTML = tq;
   spans[0].innerHTML = totalbill;
 
 }
